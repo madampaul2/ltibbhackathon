@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: shaikmustafa/repo:dbimage
+        image: madampaul2/repo:dbimage
         ports:
         - containerPort: 80
           name: web
@@ -23,7 +23,7 @@ spec:
         - name: www
           mountPath: /usr/share/nginx/html
       imagePullSecrets:
-            - name: dockerhub-secret
+            - name: mysecret
   volumeClaimTemplates:
   - metadata:
       name: www
